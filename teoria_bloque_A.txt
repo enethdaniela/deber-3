@@ -1,0 +1,14 @@
+TA.1 ¿Qué diferencia hay entre una variable normal y un puntero?
+     una variable normal almacena un valor directamente, mientras que un puntero almacena la dirección de memoria donde se encuentra ese valor. 
+
+TA.2 ¿Qué hace el operador & cuando se aplica a una variable?
+     ¿Y el operador * cuando se aplica a un puntero?
+    El operador & devuelve la dirección de memoria de la variable, mientras que el operador * se utiliza para acceder al valor almacenado en la dirección de memoria a la que apunta el puntero.
+
+TA.3 ¿Cuántos bytes ocupa un puntero a int? ¿Y uno a double?
+     ¿Por qué son iguales?
+     Ocupan el mismo número de bytes porque ambos son punteros.
+
+TA.4 ¿Qué pasa si declaras int* ptr; y luego haces *ptr = 5;
+     sin inicializar ptr primero?
+    Causará un comportamiento indefinido.

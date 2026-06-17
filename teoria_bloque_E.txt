@@ -1,0 +1,19 @@
+TE.1 ¿Por qué es peligroso retornar un puntero a una
+     variable local desde una función?
+     ___________________________________________________
+     ___________________________________________________
+
+TE.2 Si una función retorna int* apuntando a memoria reservada
+     con new, ¿quién es responsable de hacer delete?
+     ¿Qué ocurre si nadie lo hace?
+     ¿Cómo le indicarías a otro programador que él es responsable
+     de liberar esa memoria? (pista: comentarios en la firma)
+     ___________________________________________________
+     ___________________________________________________
+     ___________________________________________________
+
+TE.3 ¿Qué es un puntero a función? Escribe la sintaxis
+     de declaración para un puntero a función que recibe
+     dos doubles y retorna double.
+     ___________________________________________________
+     ___________________________________________________

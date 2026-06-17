@@ -15,7 +15,7 @@ en cada paso y escribe qué imprime cada línea.
   cout << b  << endl;    // línea 4
   cout << a  << endl;    // línea 5
 
-  Línea 1: ___  Línea 2: ___  Línea 3: ___
-  Línea 4: ___  Línea 5: ___
+  Línea 1: 1  Línea 2: 10  Línea 3: 2
+  Línea 4: 7  Línea 5: 10
 
   Dibuja el estado de memoria después de cada línea.

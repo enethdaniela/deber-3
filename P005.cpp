@@ -23,6 +23,17 @@ int main() {
     int x = 5,  y = 10, z = 15;
     int * p =&x;
 
-    std::cout << "p -> x: *p=" << *p << "x= " << x << '\n';
-     
+    std::cout << "p -> x: *p=" << *p << " x=" << x << '\n';
+    *p = 99;
+    std::cout << "Modificar *p=99: x=" << x << '\n';
+    p = &y;
+    std::cout << "p -> y: *p=" << *p << " y=" << y << '\n';
+    *p = 88;
+    std::cout << "Modificar *p=88: y=" << y << '\n';
+    p = &z;
+    std::cout << "p -> z: *p=" << *p << " z=" << z << '\n';
+    *p = 77;
+    std::cout << "Modificar *p=77: z=" << z << '\n';
+
+    return 0;
 }

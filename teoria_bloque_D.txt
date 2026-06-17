@@ -1,0 +1,40 @@
+TD.1 ¿Cuál es la diferencia entre memoria en stack y memoria
+     en heap? Menciona al menos 3 diferencias.
+     ___________________________________________________
+     ___________________________________________________
+     ___________________________________________________
+
+TD.2 ¿Qué hace new exactamente? ¿Qué retorna?
+     ___________________________________________________
+
+TD.3 ¿Cuál es la diferencia entre delete y delete[]?
+     ¿Cuándo usas cada uno?
+     ___________________________________________________
+     ___________________________________________________
+
+TD.4 Nombra los 4 tipos de punteros problemáticos.
+     Para cada uno describe EN UNA LÍNEA cuándo ocurre.
+     1. ___________________________________________________
+     2. ___________________________________________________
+     3. ___________________________________________________
+     4. ___________________________________________________
+
+TD.5 ¿Cuál es la diferencia entre un puntero salvaje
+     y un puntero nulo? ¿Cuál es más peligroso y por qué?
+     ___________________________________________________
+     ___________________________________________________
+
+TD.6 ¿Qué es un puntero colgante? Da DOS causas distintas
+     que lo producen.
+     ___________________________________________________
+     ___________________________________________________
+
+TD.7 ¿Por qué hacer delete p; p = nullptr; protege contra
+     dos problemas a la vez? ¿Cuáles son esos dos problemas?
+     ___________________________________________________
+     ___________________________________________________
+
+TD.8 ¿Qué es la doble liberación (double free)?
+     ¿Por qué es más difícil de detectar que un memory leak?
+     ___________________________________________________
+     ___________________________________________________

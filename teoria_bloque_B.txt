@@ -1,0 +1,20 @@
+TB.1 Si int* p apunta al elemento 0 de un arreglo de int,
+     ¿a qué elemento apunta p+3? ¿Cuántos bytes avanzó
+     en memoria si sizeof(int) = 4?
+
+     p+3 apunta al elemento 3 del arreglo, y avanza 12 bytes en memoria (3 * 4).
+
+TB.2 ¿Qué es nullptr? ¿Por qué es importante inicializar
+     un puntero a nullptr cuando aún no tiene destino?
+
+     nullptr representa un puntero nulo. Es importante inicializar un puntero a nullptr cuando aún no tiene destino para evitar comportamiento indefinido.
+
+TB.3 ¿Cuál es la diferencia entre paso por puntero y paso
+     por referencia? ¿Cuándo preferirías usar uno u otro?
+
+     El paso por puntero implica pasar la dirección de memoria de una variable, mientras que el paso por referencia implica pasar una referencia a la variable. Se prefiere el paso por referencia cuando se desea evitar la copia de grandes objetos y se necesita modificar el valor original.
+
+TB.4 Si tienes int** pp, ¿cuántas desreferenciaciones
+     necesitas para llegar al valor int? ¿Cómo se escribe?
+
+     Necesitas dos desreferenciaciones para llegar al valor int. Se escribe **pp.

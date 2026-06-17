@@ -1,0 +1,24 @@
+P011 | TRAZA — aritmética y puntero a puntero
+RESUELVE A MANO. Dibuja el diagrama de memoria completo
+y escribe qué imprime cada línea.
+
+  int arr[] = {5, 10, 15, 20};
+  int* p  = arr;
+  int** pp = &p;
+
+  cout << *p      << endl;   // línea 1
+  cout << **pp    << endl;   // línea 2
+  p++;
+  cout << *p      << endl;   // línea 3
+  cout << **pp    << endl;   // línea 4
+  *pp = arr;                 // ← CLAVE: esto modifica p, no pp
+                             // porque *pp ES p (pp apunta a p)
+  cout << **pp    << endl;   // línea 5
+  cout << *(p+2)  << endl;   // línea 6
+
+  Antes de responder las líneas 5 y 6, escribe aquí
+  el valor de p después de *pp = arr:
+  p después de *pp = arr: p apunta a arr[0] = 5
+
+  Línea 1: 5  Línea 2: 5  Línea 3: 10
+  Línea 4: 10  Línea 5: 5  Línea 6: 15

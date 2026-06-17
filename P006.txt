@@ -1,0 +1,32 @@
+P006 | ANÁLISIS — errores de punteros
+Lee el siguiente código. Para cada fragmento indica si
+compila, si ejecuta correctamente, o si tiene comportamiento
+indefinido. Explica por qué en cada caso.
+
+  // Fragmento A:
+  int* p;
+  cout << *p;
+
+  // Fragmento B:
+  int x = 5;
+  int* p = &x;
+  cout << *p;
+
+  // Fragmento C:
+  int x = 5;
+  int* p = &x;
+  p = 100;
+  // Compila con WARNING (conversión implícita de int a puntero)
+  // pero NO es error de compilación en todos los compiladores.
+  // Si luego desreferencias p con *p, falla en EJECUCIÓN.
+
+  // Fragmento D:
+  int x = 5;
+  int* p = &x;
+  *p = 100;
+  cout << x;
+
+  Fragmento A: Compila pero tiene comportamiento indefinido.
+  Fragmento B: Ejecuta correctamente.
+  Fragmento C: Compila con WARNING, pero tiene comportamiento indefinido en ejecución.
+  Fragmento D: Ejecuta correctamente.

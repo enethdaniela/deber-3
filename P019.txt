@@ -1,0 +1,55 @@
+P019 | ANÁLISIS — los 4 tipos de punteros problemáticos
+Identifica el tipo de problema en cada fragmento
+(puntero salvaje, puntero nulo mal usado, puntero colgante,
+doble liberación, o memory leak). Explica por qué.
+Escribe la corrección.
+
+  // Fragmento A:
+  int* p;
+  *p = 42;
+
+  // Fragmento B:
+  int* p = new int(10);
+  p = new int(20);
+
+  // Fragmento C:
+  int* p = new int(5);
+  delete p;
+  cout << *p;
+
+  // Fragmento D:
+  int* arr = new int[10];
+  delete arr;
+
+  // Fragmento E:
+  int* p1 = new int(5);
+  int* p2 = p1;
+  delete p1;
+  p1 = nullptr;
+  delete p2;
+
+  // Fragmento F:
+  int* obtener() {
+      int x = 99;
+      return &x;
+  }
+  int* p = obtener();
+  cout << *p;
+
+  Fragmento A — tipo: puntero salvaje por qué: p no ha sido inicializado, produce un comportamiento indefinido.
+  Corrección A: int* p = new int; *p = 42; // o int* p = new int(42);
+
+  Fragmento B — tipo: memory leak por qué: el primer espacio de memoria asignado con new no es liberado.
+  Corrección B: int* p = new int(10); delete p; p = new int(20); // o usar unique_ptr
+
+  Fragmento C — tipo: puntero colgante por qué: p apunta a memoria que ha sido liberada.
+  Corrección C: int* p = new int(5); delete p; p = nullptr; // o usar unique_ptr
+
+  Fragmento D — tipo: doble liberación por qué: se llama a delete arr sin usar delete[].
+  Corrección D: int* arr = new int[10]; delete[] arr; // o usar unique_ptr
+
+  Fragmento E — tipo: doble liberación por qué: p1 y p2 apuntan a la misma memoria, y se libera dos veces.
+  Corrección E: int* p1 = new int(5); int* p2 = p1; delete p1; p1 = nullptr; p2 = nullptr; // o usar unique_ptr
+
+  Fragmento F — tipo: puntero colgante por qué: x es una variable local, y su dirección es devuelta.
+  Corrección F: int* obtener() { int x = 99; return new int(x); } // o usar unique_ptr

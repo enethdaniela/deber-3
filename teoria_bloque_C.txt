@@ -1,0 +1,17 @@
+TC.1 ¿En qué se parecen un arreglo y un puntero?
+     ¿En qué se diferencian?
+     ___________________________________________________
+     ___________________________________________________
+
+TC.2 ¿Son equivalentes arr[i] y *(arr+i)? ¿Por qué?
+     ___________________________________________________
+
+TC.3 Cuando pasas un arreglo a una función, ¿se copia
+     el arreglo completo o se pasa un puntero?
+     ¿Qué consecuencia tiene esto si la función modifica
+     los elementos?
+     ___________________________________________________
+     ___________________________________________________
+
+TC.4 ¿Cuál es la diferencia entre objeto.miembro y
+     puntero->miembro? ¿Cuándo usas cada uno?
