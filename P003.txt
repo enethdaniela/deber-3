@@ -1,0 +1,21 @@
+P003 | TRAZA — predecir valores
+RESUELVE A MANO primero. Dibuja el diagrama de memoria
+en cada paso y escribe qué imprime cada línea.
+
+  int a = 1;
+  int b = 2;
+  int* p = &a;
+
+  cout << *p << endl;    // línea 1
+  *p = 10;
+  cout << a  << endl;    // línea 2
+  p = &b;
+  cout << *p << endl;    // línea 3
+  *p = *p + 5;
+  cout << b  << endl;    // línea 4
+  cout << a  << endl;    // línea 5
+
+  Línea 1: ___  Línea 2: ___  Línea 3: ___
+  Línea 4: ___  Línea 5: ___
+
+  Dibuja el estado de memoria después de cada línea.
